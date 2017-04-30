@@ -44,7 +44,9 @@ Var (num_par [c (num_par <60) | (num_par> 80)], na.rm = FALSE)
 
 ## 1,2 - volume de ó de Um cone de raio R e altura H é dado POR (1/3) x (pi) × R ^ 2 × H. Tendo obtido o volume de ea altura de SEIS cones, apresentados um Seguir, o calculé Volume de cada um deles.
 ## R = {2,27, 1,98, 1,69, 1,88, 1,64, 2,14}
-# # H = {8,28, 8,04, 9,06, 8,70, 7,58, 8,34}
+## H = {8,28, 8,04, 9,06, 8,70, 7,58, 8,34}
+
+
 
 ## Operações matemáticas
 ## 1.3 - Calcule o que se pede:
@@ -55,19 +57,83 @@ Var (num_par [c (num_par <60) | (num_par> 80)], na.rm = FALSE)
 
 ## b) 564 + 29/5
 564 + 29/5
+## Resposta [1] 569.8
+
 ## c) sqrt (76)
+sqrt (76)
+## Resposta [1] 8.717798
 
 ## d) ln 12345
+l <- c(1,2,3,4,5)
+log(l)
+## Resposta [1] 0.0000000 0.6931472 1.0986123 1.3862944 1.6094379
 
 ## e) log2 12345
-## f) log10 12345 1
+log2 (l)
+## Resposta [1] 0.000000 1.000000 1.584963 2.000000 2.321928
 
-## g) ??62  - combinatório de seis, dois a dois (Dica: existe uma função que calcula isso).
+## f) log10 12345
+log10 (l)
+## Resposta [1] 0.0000000 0.3010300 0.4771213 0.6020600 0.6989700
 
-##  h) |18 - 50|
+## g) (6,2)combinatório de seis, dois a dois (Dica: existe uma função que calcula isso).
+choose(6,2)
+## Resposta [1] 15
 
-## i) sin(), cos(), tan()
+##  h) |18 − 50|
+abs (18-50)
+## Resposta [1] 32
 
-## j) Arredonde o valor de  para 4 casas decimais;
+## i) sin(pi), cos(pi), tan(pi)
+sin(pi)
+## Resposta [1] 1.224606e-16
+cos(pi)
+## Resposta [1] -1
+tan(pi)
+## Resposta [1] -1.224647e-16
+
+## j) Arredonde o valor de pi para 4 casas decimais;
+round(pi, digits = 4)
+## Resposta [1] 3.1416
+
+
+## Matrizes
+## 1.4 - Dada a matriz A definida a seguir, obtenha o que se pede:
+
+
+mdat <- matrix(c(35,72,45, 20,9,17, 13,16,76), nrow = 3, ncol = 3, byrow = TRUE,
+               dimnames = list(c("row1", "row2", "row3"),
+                               c("C.1", "C.2", "C.3")))
+
+## a) obtenha os elementos da diagonal principal. Dica: existe uma função que faz isso. . . ;
+diag(mdat)
+## Resposta [1] 35  9 76
+
+## b) obtenha a soma dos elementos da matriz;
+sum(mdat)
+## Resposta [1] 303
+
+## c) obtenha a soma dos elementos da primeira linha e da segunda coluna (A11+A12+A13+A12+A22+A32)
+l_soma = mdat[,1]  + mdat[2,]
+
+## d) obtenha a soma da primeira coluna com com a terceira linha (A.1 + A3.)
+c_soma = mdat[1,]  + mdat[,3]
+
+
+## e) faça a trasposição da matriz;
+mdat
+## Resposta      C.1 C.2 C.3
+## Resposta row1  35  72  45
+## Resposta row2  20   9  17
+## Resposta row3  13  16  76
+
+## f) crie duas novas colunas com os valores: coluna 4:{27, 48, 23}, coluna 5:{12, 3, 9};
+
+mdat1 <- matrix(c(35,72,45,27,12, 20,9,17,48,3, 13,16,76,23,9), nrow = 3, ncol = 5, byrow = TRUE,
+                dimnames = list(c("row1", "row2", "row3"),
+                                c("C.1", "C.2", "C.3", "C.4", "C.5")))
+
+
+## g) substitua a terceira coluna de A pela soma da segunda e terceira colunas;
 
 
