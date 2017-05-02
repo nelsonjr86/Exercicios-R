@@ -2,43 +2,43 @@
 ## Vetores
 ## 1.1 - Crie, hum Vetor Chamado vec contendo OS Elementos {26, NA, 72, 45, 12, 16, NA, 88} e obtenha o Que se pede:
 ## Criando vectorial
-Vec <- c (26, NA, 72, 45, 12, 16, NA, 88)
+vec <- c (26, NA, 72, 45, 12, 16, NA, 88)
 ## a) Obtenha um novo vetor (vec1) contendo o primeiro eo último elementos do vetor vec;
 ## acesso ao primeiro e último elemento
-Vec1 <- vec [c (1, comprimento (vec))]
+vec2 <- vec[c(1, comprimento (vec))]
 ## b) Insira between OS Elementos 72 e 45 fazem a Vetor vec OS Elementos {24, 13, 42}. Dica: a função append () pode ser útil;
 ## Criar um vetor dados e inserir os elementos 
 ## Depois de inserir este vetor na posição que deseja 
-Dados <- c (24, 13, 42)
-Vec <- append (vec, dados, after = 3)
+dados <- c (24, 13, 42)
+vec <- append(vec, dados, after = 3)
 ## c) Obtenha o produto dos elementos do vetor vec;
-Prod (vec)
+prod (vec)
 ## resposta [1] NA
 ## d) Obtenha valores que não sejam NA;
-Prod (vec, na.rm = TRUE)
+prod (vec, na.rm = TRUE)
 ## Resposta [1] 1.865117e + 13
 ## e) Obtenha os valores maiores que a média dos elementos do vetor vec.
-Posicao <- vec> mean (vec, na.rm = TRUE)
-Vec [posicao]
+posicao <- vec> mean (vec, na.rm = TRUE)
+vec [posicao]
 ## Resposta [1] NA 72 42 45 NA 88
 ## f) Obtenha um vetor contendo os valores que antecedem e sucedem a cada AN. Dica: uma função que () pode ser útil;
-Pos <- which (is.na (vec))
+pos <- which (is.na (vec))
 Vectot <- c (vec [pos-1], vec [pos + 1])
 
 ## g) Dados os vetores a <-c (14, 27, 45, 72, 19, -12) eb <- c (6, 9, 8, NA, 7, 5), calcule a + b + 5;
-A <- c (14, 27, 45, 72, 19, -12)
-B <-c (6, 9, 8, NA, 7, 5)
-C <- (a + b + 5)
+a <- c (14, 27, 45, 72, 19, -12)
+b <-c (6, 9, 8, NA, 7, 5)
+c <- (a + b + 5)
 ## h) Criar um vetor num_pares contendo os números inteiros pares menores que 100;
-Numeros <- c (1:99)
-Num_par <-numeros [numeros %% 2 == 0]
+numeros <- c (1:99)
+num_par <-numeros [numeros %% 2 == 0]
 
 ## i) Exclua este vetor os valores maiores que 60 e menores que 80;
-Num_par [c (num_par> 60) & (num_par <80)]
+num_par [c (num_par> 60) & (num_par <80)]
 ## resposta [1] 62 64 66 68 70 72 74 76 78
 
 ## j) Encontre uma variância dos valores remanescentes.
-Var (num_par [c (num_par <60) | (num_par> 80)], na.rm = FALSE)
+var (num_par [c (num_par <60) | (num_par> 80)], na.rm = FALSE)
 ## Resposta [1] 894.2248
 
 
