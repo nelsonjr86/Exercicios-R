@@ -1,0 +1,13 @@
+2.1 empresa <- read.csv2("C:/2/20170508_CEIS2.csv")
+View(empresa)
+2.2 governaca <- read.csv2("C:/2/DadosColetados_PerfilGovTI.csv", sep=",")
+View(governaca)
+2.3 library(sqldf)
+escolas <- read.csv2("C:/2/escolas.csv", sep=",")
+resultado <- sqldf("select * from escolas where FK_COD_MUNICIPIO = 3304557 and ID_DEPENDENCIA_ADM = 3  ")
+View(resultado)
+2.4 
+2.5 
+2.6 write.table(rock , file='C:/2/rock.csv', sep=",", row.names=TRUE)
+write.table(ToothGrowth , file='C:/2/ToothGrowth.csv', sep=",", row.names=TRUE)
+2.7 

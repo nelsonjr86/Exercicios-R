@@ -1,0 +1,22 @@
+3.1 mtcars
+3.2 names(mtcars)
+3.3 dim(mtcars)
+3.4 mean(mtcars$mpg)
+3.5 range(mtcars$disp)
+3.6 cor(mtcars$mpg,mtcars$wt)
+3.7 mtcars[mtcars$mpg > 20 & mtcars$hp >80, ]
+3.8 library(data.table)
+setnames (mtcars, old = c ("carb"), new = c("qtd_carburadores"))
+3.9 mtcars <- mtcars[,!names(mtcars) %in% c("qsec")]
+mtcars
+3.10 novo <- mtcars[, names(mtcars) %in% c("mpg", "wt", "cyl")] 
+novo
+3.11 novo[order(novo$cyl, novo$mpg, novo$wt),]
+3.12 rownames(mtcars)
+3.13 mtcars$hp[15]
+3.14 with(mtcars,mean(mpg[cyl == 6]))
+3.15 with(mtcars,max(cyl)*min(wt))
+3.16 mtcars[c(4,10,19), c("mpg","drat","vs")]
+3.17 vetor <- mtcars$cyl + mtcars$carb
+ sum(vetor)
+
